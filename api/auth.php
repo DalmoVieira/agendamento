@@ -8,11 +8,17 @@ header('Content-Type: application/json');
 $action = $_POST['action'] ?? $_GET['action'] ?? '';
 
 if ($action === 'login') {
-    $username = $_POST['username'] ?? '';
+    $username = trim($_POST['username'] ?? '');
     $password = $_POST['password'] ?? '';
+    $captcha = $_POST['captcha'] ?? '';
 
-    if (empty($username) || empty($password)) {
-        echo json_encode(['success' => false, 'message' => 'Usuário e senha são obrigatórios.']);
+    if (empty($username) || empty($password) || $captcha === '') {
+        echo json_encode(['success' => false, 'message' => 'Todos os campos são obrigatórios.']);
+        exit;
+    }
+
+    if (!isset($_SESSION['captcha_answer']) || (int)$captcha !== $_SESSION['captcha_answer']) {
+        echo json_encode(['success' => false, 'message' => 'Resultado da soma incorreto. Tente novamente.']);
         exit;
     }
 
