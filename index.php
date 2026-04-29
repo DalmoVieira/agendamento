@@ -125,6 +125,6 @@ require_once __DIR__ . '/includes/header.php';
     </div>
 </main>
 
-<script src="/assets/js/main.js"></script>
+<script src="<?php echo $baseUrl; ?>/assets/js/main.js"></script>
 
 <?php require_once __DIR__ . '/includes/footer.php'; ?>

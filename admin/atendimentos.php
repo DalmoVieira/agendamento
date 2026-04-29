@@ -83,7 +83,7 @@ require_once __DIR__ . '/../includes/header.php';
     </div>
 </div>
 
-<script src="/assets/js/admin.js"></script>
+<script src="<?php echo $baseUrl; ?>/assets/js/admin.js"></script>
 <script>
 let items = [];
 let medicos = [];
