@@ -5,6 +5,11 @@ if (isset($_SESSION['user_id'])) {
     header("Location: /admin/index.php");
     exit;
 }
+
+// Generate Math Captcha
+$num1 = rand(1, 9);
+$num2 = rand(1, 9);
+$_SESSION['captcha_answer'] = $num1 + $num2;
 ?>
 
 <div class="container d-flex justify-content-center align-items-center" style="min-height: 70vh;">
@@ -19,11 +24,18 @@ if (isset($_SESSION['user_id'])) {
                     <label for="username" class="form-label text-muted">Usuário</label>
                     <input type="text" class="form-control form-control-lg bg-light" id="username" name="username" required>
                 </div>
-                <div class="mb-4">
+                <div class="mb-3">
                     <label for="password" class="form-label text-muted">Senha</label>
                     <input type="password" class="form-control form-control-lg bg-light" id="password" name="password" required>
                 </div>
-                <button type="submit" class="btn btn-primary btn-lg w-100 fw-bold shadow-sm" id="btnLogin">Entrar</button>
+                <div class="mb-4">
+                    <label for="captcha" class="form-label text-muted">Anti-bot: Quanto é <?php echo $num1; ?> + <?php echo $num2; ?>?</label>
+                    <input type="number" class="form-control form-control-lg bg-light" id="captcha" name="captcha" required>
+                </div>
+                <button type="submit" class="btn btn-primary btn-lg w-100 fw-bold shadow-sm mb-3" id="btnLogin">Entrar</button>
+                <div class="text-center">
+                    <a href="/recuperar_senha.php" class="text-decoration-none text-muted"><small>Esqueceu sua senha?</small></a>
+                </div>
             </form>
         </div>
     </div>
