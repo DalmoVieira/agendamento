@@ -17,7 +17,7 @@ require_once __DIR__ . '/../includes/header.php';
                         <i class="bi bi-person-badge display-4 text-primary mb-3"></i>
                         <h5 class="card-title">Profissionais</h5>
                         <p class="card-text text-muted">Gerencie médicos e dentistas.</p>
-                        <a href="/admin/medicos.php" class="btn btn-outline-primary mt-2">Acessar</a>
+                        <a href="<?php echo $baseUrl; ?>/admin/medicos.php" class="btn btn-outline-primary mt-2">Acessar</a>
                     </div>
                 </div>
             </div>
@@ -27,7 +27,7 @@ require_once __DIR__ . '/../includes/header.php';
                         <i class="bi bi-calendar-range display-4 text-success mb-3"></i>
                         <h5 class="card-title">Escalas</h5>
                         <p class="card-text text-muted">Configure os horários de atendimento.</p>
-                        <a href="/admin/escalas.php" class="btn btn-outline-success mt-2">Acessar</a>
+                        <a href="<?php echo $baseUrl; ?>/admin/escalas.php" class="btn btn-outline-success mt-2">Acessar</a>
                     </div>
                 </div>
             </div>
@@ -37,7 +37,7 @@ require_once __DIR__ . '/../includes/header.php';
                         <i class="bi bi-clipboard2-data display-4 text-warning mb-3"></i>
                         <h5 class="card-title">Atendimentos</h5>
                         <p class="card-text text-muted">Registre os atendimentos diários.</p>
-                        <a href="/admin/atendimentos.php" class="btn btn-outline-warning mt-2">Acessar</a>
+                        <a href="<?php echo $baseUrl; ?>/admin/atendimentos.php" class="btn btn-outline-warning mt-2">Acessar</a>
                     </div>
                 </div>
             </div>
