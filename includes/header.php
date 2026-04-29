@@ -10,6 +10,9 @@ $isLoggedIn = isset($_SESSION['user_id']);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Prefeitura de Rio Claro RJ - Secretaria Municipal de Saúde</title>
+    <!-- Favicon -->
+    <link rel="icon" href="https://rioclaro.rj.gov.br/wp-content/uploads/2025/02/cropped-favicon-pmrcrj-32x32.jpeg" sizes="32x32">
+    <link rel="icon" href="https://rioclaro.rj.gov.br/wp-content/uploads/2025/02/cropped-favicon-pmrcrj-192x192.jpeg" sizes="192x192">
     <!-- Bootstrap CSS e JS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
