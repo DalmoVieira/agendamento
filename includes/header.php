@@ -23,11 +23,13 @@ $isLoggedIn = isset($_SESSION['user_id']);
     <header class="bg-primary text-white py-3 shadow-sm">
         <div class="container d-flex justify-content-between align-items-center">
             <div class="d-flex align-items-center">
-                <img src="https://rioclaro.rj.gov.br/wp-content/uploads/2024/10/logo-blank.png" alt="Logo" class="me-3" style="max-height: 60px;">
-                <div>
-                    <h1 class="h4 mb-0">Prefeitura de Rio Claro RJ</h1>
-                    <h2 class="h6 mb-0 text-white-50">Secretaria Municipal de Saúde</h2>
-                </div>
+                <a href="/" class="d-flex align-items-center text-white text-decoration-none">
+                    <img src="https://rioclaro.rj.gov.br/wp-content/uploads/2024/10/logo-blank.png" alt="Logo" class="me-3" style="max-height: 60px;">
+                    <div>
+                        <h1 class="h4 mb-0">Prefeitura de Rio Claro RJ</h1>
+                        <h2 class="h6 mb-0 text-white-50">Secretaria Municipal de Saúde</h2>
+                    </div>
+                </a>
             </div>
             <div>
                 <?php if ($isLoggedIn): ?>
