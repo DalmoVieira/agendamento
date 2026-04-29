@@ -19,7 +19,7 @@ require_once __DIR__ . '/includes/header.php';
                 <strong>Entre em contato com o administrador do sistema</strong> solicitando uma nova senha provisória de acesso.
             </div>
 
-            <a href="/login.php" class="btn btn-primary btn-lg w-100 fw-bold shadow-sm mt-3">
+            <a href="<?php echo $baseUrl; ?>/login.php" class="btn btn-primary btn-lg w-100 fw-bold shadow-sm mt-3">
                 <i class="bi bi-arrow-left me-2"></i> Voltar para o Login
             </a>
         </div>
