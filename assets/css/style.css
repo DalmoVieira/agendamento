@@ -1,0 +1,76 @@
+/* assets/css/style.css */
+body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    background-color: #f8f9fa;
+}
+
+/* Sobrescrevendo a cor primária (Azul -> Verde Prefeitura) */
+:root {
+    --bs-primary: #007f3d;
+    --bs-primary-rgb: 0, 127, 61;
+}
+
+.bg-primary {
+    background-color: var(--bs-primary) !important;
+}
+.text-primary {
+    color: var(--bs-primary) !important;
+}
+.btn-primary {
+    background-color: var(--bs-primary) !important;
+    border-color: var(--bs-primary) !important;
+}
+.btn-primary:hover {
+    background-color: #006631 !important;
+    border-color: #006631 !important;
+}
+.btn-outline-primary {
+    color: var(--bs-primary) !important;
+    border-color: var(--bs-primary) !important;
+}
+.btn-outline-primary:hover {
+    background-color: var(--bs-primary) !important;
+    color: #fff !important;
+}
+.border-primary {
+    border-color: var(--bs-primary) !important;
+}
+
+.doctor-card {
+    background: #fff;
+    border: 1px solid #e9ecef;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+    transition: transform 0.2s;
+    height: 100%;
+}
+
+.doctor-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+.doctor-card-dentista {
+    border-top: 4px solid #17a2b8;
+}
+
+.doctor-card-medico {
+    border-top: 4px solid #0d6efd;
+}
+
+.badge-medico {
+    background-color: #0d6efd;
+    color: white;
+    padding: 0.2em 0.6em;
+    border-radius: 0.25rem;
+    font-size: 0.75em;
+}
+
+.badge-dentista {
+    background-color: #17a2b8;
+    color: white;
+    padding: 0.2em 0.6em;
+    border-radius: 0.25rem;
+    font-size: 0.75em;
+}
