@@ -9,7 +9,7 @@ const AdminAPI = {
         }
         const response = await fetch(url, options);
         if (response.status === 401) {
-            window.location.href = '/login.php';
+            window.location.href = window.baseUrl + '/login.php';
             throw new Error('Não autorizado');
         }
         const data = await response.json();
@@ -19,10 +19,10 @@ const AdminAPI = {
         return data;
     },
 
-    async getAll(endpoint) { return this.request(`/api/${endpoint}.php`); },
-    async create(endpoint, payload) { return this.request(`/api/${endpoint}.php`, 'POST', payload); },
-    async update(endpoint, id, payload) { return this.request(`/api/${endpoint}.php?id=${id}`, 'PUT', payload); },
-    async remove(endpoint, id) { return this.request(`/api/${endpoint}.php?id=${id}`, 'DELETE'); }
+    async getAll(endpoint) { return this.request(window.baseUrl + `/api/${endpoint}.php`); },
+    async create(endpoint, payload) { return this.request(window.baseUrl + `/api/${endpoint}.php`, 'POST', payload); },
+    async update(endpoint, id, payload) { return this.request(window.baseUrl + `/api/${endpoint}.php?id=${id}`, 'PUT', payload); },
+    async remove(endpoint, id) { return this.request(window.baseUrl + `/api/${endpoint}.php?id=${id}`, 'DELETE'); }
 };
 
 function showAlert(message, type = 'success', containerId = 'alert-container') {

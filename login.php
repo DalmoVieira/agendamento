@@ -56,7 +56,7 @@ document.getElementById('loginForm').addEventListener('submit', async function(e
     formData.append('action', 'login');
 
     try {
-        const response = await fetch('/api/auth.php', {
+        const response = await fetch(window.baseUrl + '/api/auth.php', {
             method: 'POST',
             body: formData
         });

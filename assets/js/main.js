@@ -22,8 +22,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Load initial data
     Promise.all([
-        fetch('/api/escalas.php').then(r => r.json()),
-        fetch('/api/unidades.php').then(r => r.json())
+        fetch(window.baseUrl + '/api/escalas.php').then(r => r.json()),
+        fetch(window.baseUrl + '/api/unidades.php').then(r => r.json())
     ]).then(([escalas, unidades]) => {
         escalasRaw = escalas;
         unidadesRaw = unidades;
@@ -185,7 +185,7 @@ document.addEventListener('DOMContentLoaded', () => {
         DOM.atendBody.innerHTML = '<tr><td colspan="6" class="text-center py-4"><div class="spinner-border spinner-border-sm text-primary"></div> Carregando...</td></tr>';
         
         try {
-            const res = await fetch(`/api/atendimentos.php?${params.toString()}`);
+            const res = await fetch(window.baseUrl + `/api/atendimentos.php?${params.toString()}`);
             const data = await res.json();
             
             if (data.length === 0) {
