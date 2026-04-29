@@ -2,7 +2,7 @@
 require_once __DIR__ . '/includes/header.php';
 
 if (isset($_SESSION['user_id'])) {
-    header("Location: /admin/index.php");
+    header("Location: " . $baseUrl . "/admin/index.php");
     exit;
 }
 
@@ -34,7 +34,7 @@ $_SESSION['captcha_answer'] = $num1 + $num2;
                 </div>
                 <button type="submit" class="btn btn-primary btn-lg w-100 fw-bold shadow-sm mb-3" id="btnLogin">Entrar</button>
                 <div class="text-center">
-                    <a href="/recuperar_senha.php" class="text-decoration-none text-muted"><small>Esqueceu sua senha?</small></a>
+                    <a href="<?php echo $baseUrl; ?>/recuperar_senha.php" class="text-decoration-none text-muted"><small>Esqueceu sua senha?</small></a>
                 </div>
             </form>
         </div>
@@ -63,7 +63,7 @@ document.getElementById('loginForm').addEventListener('submit', async function(e
         const data = await response.json();
 
         if (data.success) {
-            window.location.href = '/admin/index.php';
+            window.location.href = window.baseUrl + '/admin/index.php';
         } else {
             alertBox.textContent = data.message || 'Erro ao fazer login.';
             alertBox.classList.remove('d-none');
